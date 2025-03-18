@@ -1,14 +1,13 @@
 import Link from "next/link"
-import { Coffee } from "lucide-react"
 import { Button } from "./ui/button"
 import MobileNav from "./mobile-nav"
+import Image from "next/image"
 export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full bg-[#1e3a6e] text-white shadow-md px-2">
       <div className="flex h-16 items-center justify-between">
         <div className="flex items-center gap-2">
-          <Coffee className="h-6 w-6 text-[#f5c6c6]" />
-          <span className="text-xl font-bold">GAYO BEAN</span>
+          <Image src="/logoo.jpg" alt="abr logo" width={100} height={100} />
         </div>
         <nav className="hidden md:flex items-center gap-8">
           <Link href="/" className="text-sm font-medium hover:text-[#f5c6c6] transition-colors">

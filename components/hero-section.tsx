@@ -35,9 +35,9 @@ export default function HeroSection() {
                 </Badge>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-                <span className="text-[#DAABAD]">GAYO COFFEE</span>
+                <span className="text-[#DAABAD]">ABR Bring Coffee</span>
                 <br />
-                <span className="text-white">FROM ACEH, INDONESIA</span>
+                <span className="text-white">to Everyone, Everywhere</span>
               </h1>
             </div>
             <p className="text-lg text-gray-200 max-w-[600px] leading-relaxed italic">
@@ -95,18 +95,18 @@ export default function HeroSection() {
                 </div>
                 <div className="mt-2 bg-[#1e3a6e]/80 p-3 rounded">
                   <p className="text-xs sm:text-sm italic text-[#DAABAD] font-serif">
-                    &quot:Whether it`s a quick morning coffee or a slow brewing ritual, our Gayo beans deliver an exceptional experience.&quot:
+                    {`“Whether it's a quick morning coffee or a slow brewing ritual, our Gayo beans deliver an exceptional experience.”`}
                   </p>
                   <p className="text-xs text-gray-300 mt-1">- Rafi Ahmad, Master Roaster</p>
                 </div>
               </div>
 
-              <div className="hidden md:flex flex-col justify-between">
+              <div className="hidden md:flex flex-col gap-3">
                 <div className="bg-[#1e3a6e]/80 p-3 rounded mb-4">
                   <h3 className="text-[#DAABAD] font-medium">Sustainably Harvested</h3>
                   <p className="text-xs text-gray-300">Supporting 1,200+ local farmers</p>
                 </div>
-                <div className="relative rounded-lg overflow-hidden h-80">
+                <div className="relative rounded-lg overflow-hidden h-80 w-48">
                   <Image
                     src="/bean-hero.jpg"
                     alt="Pouring cold brew coffee"
@@ -119,14 +119,6 @@ export default function HeroSection() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Mobile testimonial - only visible on mobile */}
-          <div className="md:hidden bg-[#1e3a6e]/80 p-3 rounded mt-4">
-            <p className="text-xs sm:text-sm italic text-[#DAABAD] font-serif">
-              &quot;Whether it`s a quick morning coffee or a slow brewing ritual, our Gayo beans deliver an exceptional experience.&quot;
-            </p>
-            <p className="text-xs text-gray-300 mt-1">- Rafi Ahmad, Master Roaster</p>
           </div>
         </div>
       </div>

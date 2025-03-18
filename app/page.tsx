@@ -15,10 +15,10 @@ import {
   Heater,
   Sprout,
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
+import CatalogSection from "@/components/catalog-section"
 
 export default function CoffeeBeanShop() {
   return (
@@ -97,58 +97,7 @@ export default function CoffeeBeanShop() {
             </div>
           </div>
         </section>
-
-
-
-        {/* About Us Section */}
-        <section id="about" className="w-full bg-[#f8f3e9] py-24">
-          <div className="container mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="relative">
-                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/placeholder.svg?height=800&width=600"
-                    alt="Coffee plantation in Gayo highlands"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg max-w-[300px]">
-                  <p className="text-[#1e3a6e] font-medium italic">
-                    &quot;Our mission is to bring the unique flavor of Gayo coffee to the world while supporting local
-                    farmers in Aceh, Indonesia.&quot;
-                  </p>
-                  <p className="text-[#1e3a6e]/70 text-sm mt-2">— Ahmad Rizki, Founder</p>
-                </div>
-              </div>
-
-              <div className="space-y-8">
-                <Badge className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#f5c6c6]">Our Story</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a6e]">THE GAYO COFFEE HERITAGE</h2>
-                <div className="space-y-4 text-[#1e3a6e]/80">
-                  <p className="leading-relaxed">
-                    Nestled in the highlands of Aceh, Indonesia, the Gayo region is renowned for producing some of the
-                    world`s most distinctive coffee. Our journey began in 2012 when we established direct relationships
-                    with local farmers to bring these exceptional beans to coffee enthusiasts worldwide.
-                  </p>
-                  <p className="leading-relaxed">
-                    Gayo coffee is known for its unique processing method called wet-hulling or Giling Basah,which
-                    contributes to its distinctive earthy, spicy, and sometimes herbal flavor profile. The region`s high
-                    altitude, volcanic soil, and ideal climate create perfect conditions for growing exceptional coffee.
-                  </p>
-                  <p className="leading-relaxed">
-                    We work directly with farming cooperatives in the Gayo highlands, ensuring fair compensation and
-                    sustainable farming practices. By cutting out middlemen, we`re able to provide higher quality beans
-                    at better prices while supporting the local economy.
-                  </p>
-                </div>
-                <Button className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] rounded-full px-8 py-6">
-                  Learn More About Gayo Coffee
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+        <CatalogSection />
 
         {/* Unique Selling Points */}
         <section id="advantages" className="w-full bg-[#1e3a6e] text-white py-24">
@@ -242,10 +191,48 @@ export default function CoffeeBeanShop() {
             </div>
           </div>
         </section>
+        <section id="about" className="w-full bg-[#f8f3e9] py-24">
+          <div className="container mx-auto">
+            <div className="grid md:grid-cols-2 gap-16 items-center">
+              <div className="relative">
+                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
+                  <Image
+                    src="/placeholder.svg?height=800&width=600"
+                    alt="Coffee plantation in Gayo highlands"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+                <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg max-w-[300px]">
+                  <p className="text-[#1e3a6e] font-medium italic">
+                    &quot; To make great coffee accessible to everyone, ensuring that every cup delivers quality and joy, matter where are.&quot;
+                  </p>
+                  <p className="text-[#1e3a6e]/70 text-sm mt-2">— Ahmad Rizki, Founder</p>
+                </div>
+              </div>
+
+              <div className="space-y-8">
+                <Badge className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#f5c6c6]">Our Story</Badge>
+                <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a6e]">SUSTAINABLE COFFEE CULTIVATION</h2>
+                <div className="space-y-4 text-[#1e3a6e]/80">
+                  <p className="leading-relaxed">
+                    AB Roastery (ABR) is dedicated to empowering farmers by enhancing their economic stability and business growth. Through continuous support, training, and facility development, ABR helps farmers improve their skills, leading to increased coffee production and quality.
+                  </p>
+                  <p className="leading-relaxed">
+                    Committed to environmental conservation, ABR educates its cooperative members on sustainable farming practices. By prioritizing biodiversity and responsible land use, it ensures long-term ecological balance while maintaining high-quality coffee cultivation.
+                  </p>
+                  <p className="leading-relaxed">
+                    Located in Central Aceh Regency, ABR oversees 48,300 hectares of Arabica coffee plantations, producing world-renowned Gayo Arabica Coffee. With farmers spread across 35 villages, the cooperative cultivates high-quality Typica and Catimor varieties, exporting over 1.2 million kilograms of certified coffee annually.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Contact Section with Map */}
         <section id="contact" className="w-full bg-[#f5c6c6] py-20">
-          <div className="container">
+          <div className="container mx-auto">
             <div className="text-center mb-16 max-w-2xl mx-auto">
               <Badge className="bg-[#104B2B] text-white hover:bg-[#104B2B] mb-4">Visit Us</Badge>
               <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a6e] mb-4">Experience Gayo Coffee</h2>
@@ -340,11 +327,10 @@ export default function CoffeeBeanShop() {
           <div className="grid md:grid-cols-4 gap-16">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <Coffee className="h-6 w-6 text-[#f5c6c6]" />
-                <span className="text-xl font-bold">GAYO BEAN</span>
+                <Image src="/logolong.jpg" alt="logolong" width={400} height={100} />
               </div>
               <p className="text-sm text-gray-300">
-                Premium Gayo coffee beans from Aceh, Indonesia. Ethically sourced, traditionally processed.
+                Premium coffee beans from Aceh, Indonesia. Ethically sourced, traditionally processed.
               </p>
             </div>
             <div>
