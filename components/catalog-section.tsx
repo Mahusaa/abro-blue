@@ -1,5 +1,4 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Check } from "lucide-react"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
 import Image from "next/image"

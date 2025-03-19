@@ -10,7 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Product } from "@/server/db/schema"
 
 export default function AllProducts({ products }: { products: Product[] }) {
-  const [tab, setTab] = useState<"roasted" | "green">("green")
+  const [tab] = useState<"roasted" | "green">("green")
   const [searchQuery, setSearchQuery] = useState("")
   const filteredProduct = useMemo(() => {
     if (!products) return []

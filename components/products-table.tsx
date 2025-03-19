@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import { Edit, Eye, Plus, Search, Trash2 } from "lucide-react"
+import { Edit, Plus, Search, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -42,7 +42,7 @@ export default function ProductsTable({ products }: { products: Product[] }) {
     if (productToDelete) {
       try {
         // In a real app, this would call a server action to delete from the database
-        await deleteProduct(productToDelete)
+        //await deleteProduct(productToDelete)
         // Update local state
         products.filter((p) => p.id !== productToDelete)
         setDeleteDialogOpen(false)
