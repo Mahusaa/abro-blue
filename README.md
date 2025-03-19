@@ -1,4 +1,4 @@
-[ ] add product works
-[ ] add vercel blob
+[x] add product works
+[x] add vercel blob
 [ ] redesign sign in page & fix error
 [ ] fix content

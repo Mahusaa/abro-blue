@@ -6,7 +6,7 @@ import { config } from 'dotenv';
 
 config({ path: ".env" }); // or .env.local
 
-const key = new TextEncoder().encode(process.env.AUTH_SECRET);
+const key = new TextEncoder().encode(process.env.NEXT_PUBLIC_AUTH_SECRET);
 const SALT_ROUNDS = 10;
 
 export async function hashPassword(password: string) {
