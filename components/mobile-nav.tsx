@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import Link from "next/link"
-import { Menu, X, Coffee, ChevronRight } from "lucide-react"
+import { Menu, X, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
@@ -21,13 +22,8 @@ export default function MobileNav() {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center gap-2">
-              <Coffee className="h-6 w-6 text-[#f5c6c6]" />
-              <span className="text-xl font-bold">GAYO BEAN</span>
+              <Image src="/logoo.jpg" alt="abr logo" width={50} height={50} />
             </div>
-            <Button variant="ghost" size="icon" onClick={() => setOpen(false)}>
-              <X className="h-6 w-6 text-white" />
-              <span className="sr-only">Close</span>
-            </Button>
           </div>
 
           <nav className="flex-1 overflow-auto py-6 px-4">
@@ -103,24 +99,6 @@ export default function MobileNav() {
                     onClick={() => setOpen(false)}
                   >
                     Roasted Beans
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="flex items-center text-base hover:text-[#f5c6c6] transition-colors"
-                    onClick={() => setOpen(false)}
-                  >
-                    Brewing Equipment
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="flex items-center text-base hover:text-[#f5c6c6] transition-colors"
-                    onClick={() => setOpen(false)}
-                  >
-                    Gift Cards
                   </Link>
                 </li>
               </ul>

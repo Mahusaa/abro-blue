@@ -53,9 +53,9 @@ export default function CatalogSection() {
       <div className="container px-4 md:px-6 mx-auto">
         <div className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
           <Badge className="bg-[#104B2B] text-white hover:bg-[#104B2B] mb-4">Our Catalog</Badge>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1e3a6e] mb-4">ABR COFFEE COLLECTION</h2>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1e3a6e] mb-4">AB Roastery Collection</h2>
           <p className="text-[#1e3a6e]/80 text-base md:text-lg">
-            Explore our selection of premium Gayo coffee beans, available as green (unroasted) or expertly roasted
+            Explore our selection of premium coffee beans, available as green (unroasted) or expertly roasted
             to bring out their unique flavor profiles.
           </p>
         </div>
@@ -79,9 +79,6 @@ export default function CatalogSection() {
                     className="bg-[#fffaf0] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border border-[#e8e3d9]"
                   >
                     <div className="relative h-64 sm:h-56 md:h-64">
-                      <Badge className="absolute top-4 left-4 z-10 bg-[#104B2B] text-white hover:bg-[#104B2B]">
-                        Premium
-                      </Badge>
                       <Image src={coffee.image} alt={coffee.name} fill className="object-cover" />
                     </div>
                     <div className="p-5 md:p-6">
@@ -90,21 +87,9 @@ export default function CatalogSection() {
                         <Badge className="bg-[#104B2B]/10 text-[#104B2B] hover:bg-[#104B2B]/10">{coffee.type}</Badge>
                       </div>
                       <p className="text-[#1e3a6e]/70 mb-4 text-sm md:text-base">{coffee.description}</p>
-
-                      <div className="space-y-2">
-                        {coffee.details.map((detail, index) => (
-                          <div key={index} className="flex items-center gap-2">
-                            <Check className="h-4 w-4 text-[#104B2B]" />
-                            <span className="text-xs md:text-sm text-[#1e3a6e]/80">
-                              {detail.label}: {detail.value}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-
                       <div className="mt-4 pt-4 border-t border-gray-100">
                         <Button className="w-full bg-[#1e3a6e] text-white hover:bg-[#1e3a6e]/90 rounded-full">
-                          View Details
+                          Contact Us
                         </Button>
                       </div>
                     </div>

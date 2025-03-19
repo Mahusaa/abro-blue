@@ -32,4 +32,11 @@ export async function getUser() {
   return user[0];
 }
 
+export async function getProducts() {
+  const products = await db.query.product.findMany()
+  return products
+}
+
+
+
 

@@ -1,5 +1,4 @@
 import Image from "next/image"
-import Link from "next/link"
 import {
   MapPin,
   Phone,
@@ -16,14 +15,13 @@ import {
   Sprout,
 } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
-import Header from "@/components/header"
 import HeroSection from "@/components/hero-section"
 import CatalogSection from "@/components/catalog-section"
+import AboutSection from "@/components/about"
 
 export default function CoffeeBeanShop() {
   return (
     <div className="flex min-h-screen flex-col bg-[#f8f3e9]">
-      <Header />
       <main className="flex-1">
         <HeroSection />
         <section className="w-full bg-[#f8f3e9] py-8">
@@ -191,45 +189,7 @@ export default function CoffeeBeanShop() {
             </div>
           </div>
         </section>
-        <section id="about" className="w-full bg-[#f8f3e9] py-24">
-          <div className="container mx-auto">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="relative">
-                <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl">
-                  <Image
-                    src="/placeholder.svg?height=800&width=600"
-                    alt="Coffee plantation in Gayo highlands"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-8 -right-8 bg-white p-6 rounded-2xl shadow-lg max-w-[300px]">
-                  <p className="text-[#1e3a6e] font-medium italic">
-                    &quot; To make great coffee accessible to everyone, ensuring that every cup delivers quality and joy, matter where are.&quot;
-                  </p>
-                  <p className="text-[#1e3a6e]/70 text-sm mt-2">— Ahmad Rizki, Founder</p>
-                </div>
-              </div>
-
-              <div className="space-y-8">
-                <Badge className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#f5c6c6]">Our Story</Badge>
-                <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a6e]">SUSTAINABLE COFFEE CULTIVATION</h2>
-                <div className="space-y-4 text-[#1e3a6e]/80">
-                  <p className="leading-relaxed">
-                    AB Roastery (ABR) is dedicated to empowering farmers by enhancing their economic stability and business growth. Through continuous support, training, and facility development, ABR helps farmers improve their skills, leading to increased coffee production and quality.
-                  </p>
-                  <p className="leading-relaxed">
-                    Committed to environmental conservation, ABR educates its cooperative members on sustainable farming practices. By prioritizing biodiversity and responsible land use, it ensures long-term ecological balance while maintaining high-quality coffee cultivation.
-                  </p>
-                  <p className="leading-relaxed">
-                    Located in Central Aceh Regency, ABR oversees 48,300 hectares of Arabica coffee plantations, producing world-renowned Gayo Arabica Coffee. With farmers spread across 35 villages, the cooperative cultivates high-quality Typica and Catimor varieties, exporting over 1.2 million kilograms of certified coffee annually.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
+        <AboutSection />
         {/* Contact Section with Map */}
         <section id="contact" className="w-full bg-[#f5c6c6] py-20">
           <div className="container mx-auto">
@@ -321,109 +281,6 @@ export default function CoffeeBeanShop() {
           </div>
         </section>
       </main>
-
-      <footer className="bg-[#1e3a6e] text-white py-12 border-t border-white/10">
-        <div className="container mx-auto">
-          <div className="grid md:grid-cols-4 gap-16">
-            <div>
-              <div className="flex items-center gap-2 mb-4">
-                <Image src="/logolong.jpg" alt="logolong" width={400} height={100} />
-              </div>
-              <p className="text-sm text-gray-300">
-                Premium coffee beans from Aceh, Indonesia. Ethically sourced, traditionally processed.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Shop</h3>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>
-                  <Link href="/products?type=green" className="hover:text-[#f5c6c6] transition-colors">
-                    Green Beans
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/products?type=roasted" className="hover:text-[#f5c6c6] transition-colors">
-                    Roasted Beans
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Brewing Equipment
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Gift Cards
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Subscriptions
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Company</h3>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>
-                  <Link href="#about" className="hover:text-[#f5c6c6] transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Sustainability
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Our Process
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#contact" className="hover:text-[#f5c6c6] transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-lg font-bold mb-4">Support</h3>
-              <ul className="space-y-2 text-sm text-gray-300">
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    FAQs
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Shipping & Returns
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link href="#" className="hover:text-[#f5c6c6] transition-colors">
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-white/10 mt-12 pt-8 text-center text-sm text-gray-300">
-            <p>&copy; {new Date().getFullYear()} Gayo Bean Coffee. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   )
 }

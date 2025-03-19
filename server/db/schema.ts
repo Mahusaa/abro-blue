@@ -33,8 +33,8 @@ export const users = createTable(
 export const product = createTable(
   'products', {
   id: serial('id').primaryKey(),
-  name: varchar('name', { length: 100 }),
-  category: varchar('category', { length: 50 }),
+  name: varchar('name', { length: 100 }).notNull(),
+  category: varchar('category', { length: 50 }).notNull(),
   description: text("description"),
   spec: varchar("spec"),
   imageUrl: text("image_url"),
@@ -46,3 +46,5 @@ export const product = createTable(
 
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
+export type Product = typeof product.$inferSelect;
+export type NewProduct = typeof product.$inferInsert;
