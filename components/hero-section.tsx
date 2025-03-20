@@ -2,6 +2,7 @@ import Image from "next/image"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
 import { Award } from "lucide-react"
+import Link from "next/link"
 export default function HeroSection() {
   return (
     <section className="w-full relative text-white">
@@ -64,9 +65,11 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 pt-2">
-              <Button className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 py-3 md:px-8 md:py-6 w-full sm:w-auto">
-                Explore Our Collection
-              </Button>
+              <Link href="#catalog">
+                <Button className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 py-3 md:px-8 md:py-6 w-full sm:w-auto">
+                  Explore Our Collection
+                </Button>
+              </Link>
             </div>
           </div>
 
