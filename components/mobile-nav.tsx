@@ -6,9 +6,19 @@ import Link from "next/link"
 import { Menu, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { User } from "@/server/db/schema"
+import { useRouter } from "next/navigation"
+import { signOut } from "@/app/(login)/action"
 
-export default function MobileNav() {
+export default function MobileNav({ user }: { user: User }) {
+  const router = useRouter();
   const [open, setOpen] = useState(false)
+  async function handleSignOut() {
+    await signOut()
+    router.refresh();
+    router.push('/');
+  }
+
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -106,9 +116,19 @@ export default function MobileNav() {
           </nav>
 
           <div className="p-4 border-t border-white/10">
-            <Button className="w-full bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full">
-              Shop Now
-            </Button>
+            {!user ? (
+              <Link href="/products">
+                <Button className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 hidden md:flex">
+                  Shop Now
+                </Button>
+              </Link>
+            ) : (
+              <form action={handleSignOut}>
+                <Button type="submit" className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 hidden md:flex">
+                  Logout
+                </Button>
+              </form>
+            )}
           </div>
         </div>
       </SheetContent>

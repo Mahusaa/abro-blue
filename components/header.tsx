@@ -5,10 +5,18 @@ import { Button } from "./ui/button"
 import MobileNav from "./mobile-nav"
 import Image from "next/image"
 import { useUser } from "@/server/auth"
+import { useRouter } from "next/navigation"
+import { signOut } from "@/app/(login)/action"
 
 export default function Header() {
   const { userPromise } = useUser()
+  const router = useRouter();
   const user = React.use(userPromise)
+  async function handleSignOut() {
+    await signOut()
+    router.refresh();
+    router.push('/');
+  }
   return (
     <header className="sticky top-0 z-40 w-full bg-[#1e3a6e] text-white shadow-md px-2">
       <div className="flex h-16 items-center justify-between">
@@ -45,11 +53,15 @@ export default function Header() {
               </Button>
             </Link>
           ) : (
-            <Button className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 hidden md:flex">
-              Logout
-            </Button>
+            <form action={handleSignOut}>
+              <Button type="submit" className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 hidden md:flex">
+                Logout
+              </Button>
+            </form>
           )}
-          <MobileNav />
+          {user && (
+            <MobileNav user={user} />
+          )}
         </div>
       </div>
     </header>
