@@ -82,6 +82,16 @@ export default function MobileNav({ user }: { user: User | null }) {
               </li>
               <li>
                 <Link
+                  href="/about"
+                  className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
+                  onClick={() => setOpen(false)}
+                >
+                  About
+                  <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/#contact"
                   className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
                   onClick={() => setOpen(false)}
