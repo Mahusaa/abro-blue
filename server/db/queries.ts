@@ -1,7 +1,7 @@
 import { and, eq, isNull } from 'drizzle-orm';
 import { db } from '.';
 import { cookies } from 'next/headers';
-import { users } from './schema';
+import { product, users } from './schema';
 import { verifyToken } from '../auth/session';
 
 
@@ -37,6 +37,12 @@ export async function getProducts() {
   return products
 }
 
+export async function getProduct(id: number) {
+  const productone = await db.query.product.findFirst({
+    where: eq(product.id, id),
+  })
+  return productone
+}
 
 
 

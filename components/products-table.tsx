@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useActionState, startTransition } from "react"
 import Link from "next/link"
 import { Edit, Plus, Search, Trash2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -18,11 +18,18 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog"
 import { Product } from "@/server/db/schema"
+import { ActionResponse, deleteProduct } from "@/actions/delete-product"
 
+
+const initialState: ActionResponse = {
+  success: false,
+  message: '',
+}
 
 export default function ProductsTable({ products }: { products: Product[] }) {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedType, setSelectedType] = useState("all")
+  const [deleteState, deleteAction, deleteIsPending] = useActionState(deleteProduct, initialState)
   const [deleteDialogOpen, setDeleteDialogOpen] = useState(false)
   const [productToDelete, setProductToDelete] = useState<number | null>(null)
 
@@ -31,6 +38,7 @@ export default function ProductsTable({ products }: { products: Product[] }) {
     const matchesType = selectedType === "all" || product.category === selectedType
     return matchesSearch && matchesType
   })
+  console.log(deleteState)
 
   // Handle product deletion
   const handleDeleteClick = (productId: number) => {
@@ -41,10 +49,9 @@ export default function ProductsTable({ products }: { products: Product[] }) {
   const confirmDelete = async () => {
     if (productToDelete) {
       try {
-        // In a real app, this would call a server action to delete from the database
-        //await deleteProduct(productToDelete)
-        // Update local state
-        products.filter((p) => p.id !== productToDelete)
+        startTransition(() => {
+          deleteAction(productToDelete)
+        })
         setDeleteDialogOpen(false)
       } catch (error) {
         console.error("Error deleting product:", error)
@@ -59,7 +66,7 @@ export default function ProductsTable({ products }: { products: Product[] }) {
           <h1 className="text-3xl font-bold tracking-tight">Products</h1>
           <p className="text-muted-foreground">Manage your coffee product catalog.</p>
         </div>
-        <Link href="/products/new">
+        <Link href="/admin/products/new">
           <Button className="bg-[#104B2B] hover:bg-[#104B2B]/90">
             <Plus className="mr-2 h-4 w-4" /> Add Product
           </Button>
@@ -144,6 +151,7 @@ export default function ProductsTable({ products }: { products: Product[] }) {
                           <Button
                             variant="outline"
                             size="icon"
+                            disabled={deleteIsPending}
                             className="h-8 w-8 text-red-500 hover:text-red-600"
                             onClick={() => handleDeleteClick(product.id)}
                           >
