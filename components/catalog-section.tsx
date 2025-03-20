@@ -1,105 +1,137 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Badge } from "./ui/badge"
-import { Button } from "./ui/button"
 import Image from "next/image"
+import Link from "next/link"
+import { ArrowRight, Leaf, Flame } from "lucide-react"
 
-const coffeeCatalog = {
-  green: [
-    {
-      id: "speciality",
-      name: "Arabika Gayo Speciality",
-      type: "Green",
-      description: "Our highest grade Gayo Arabica beans with exceptional flavor complexity and clarity.",
-      image: "/placeholder.svg?height=400&width=400",
-      details: [
-        { label: "Altitude", value: "1,500-1,700 meters" },
-        { label: "Process", value: "Wet-hulled" },
-        { label: "Cupping Score", value: "86+" },
-      ],
-    },
-    {
-      id: "premium",
-      name: "Arabika Gayo Premium",
-      type: "Green",
-      description: "Premium grade Gayo Arabica with excellent body and distinctive flavor notes.",
-      image: "/placeholder.svg?height=400&width=400",
-      details: [
-        { label: "Altitude", value: "1,400-1,600 meters" },
-        { label: "Process", value: "Wet-hulled" },
-        { label: "Cupping Score", value: "84-85" },
-      ],
-    },
-  ],
-  roasted: [
-    {
-      id: "dark-roast",
-      name: "Arabika Gayo Dark Roast",
-      type: "Roasted",
-      description: "A bold and rich dark roast that enhances the deep chocolate and spice notes.",
-      image: "/placeholder.svg?height=400&width=400",
-      details: [
-        { label: "Roast Level", value: "Dark" },
-        { label: "Flavor Notes", value: "Chocolate, Spices" },
-        { label: "Cupping Score", value: "85+" },
-      ],
-    },
-  ],
-}
+import { Button } from "@/components/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-export default function CatalogSection() {
+export default function CoffeeCatalogTabs() {
+  const coffeeTypes = [
+    "Arabika Gayo Speciality",
+    "Arabica Gayo Premium",
+    "Arabica Gayo Grade 1",
+    "Arabika Gayo Asalan",
+    "Robusta Gayo",
+  ]
+
+  const bgColor = "#f5f2e9"
+  const primaryColor = "#2a4178" // Navy blue
+  const secondaryColor = "#0a4d2e" // Dark green
+  const textColor = "#5d6b8a" // Gray-blue
+
   return (
-    <section id="catalog" className="w-full bg-[#f8f3e9] py-16 md:py-20">
+    <section className="w-full py-12" style={{ backgroundColor: bgColor }}>
       <div className="container px-4 md:px-6 mx-auto">
-        <div className="text-center mb-10 md:mb-16 max-w-2xl mx-auto">
-          <Badge className="bg-[#104B2B] text-white hover:bg-[#104B2B] mb-4">Our Catalog</Badge>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-[#1e3a6e] mb-4">AB Roastery Collection</h2>
-          <p className="text-[#1e3a6e]/80 text-base md:text-lg">
-            Explore our selection of premium coffee beans, available as green (unroasted) or expertly roasted
-            to bring out their unique flavor profiles.
+        <div className="flex flex-col items-center text-center mb-10">
+          <div className="inline-block px-4 py-2 rounded-full mb-4" style={{ backgroundColor: secondaryColor }}>
+            <span className="text-white font-medium">Our Catalog</span>
+          </div>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-2" style={{ color: primaryColor }}>
+            AB Roastery Collection
+          </h2>
+          <p className="max-w-[700px] md:text-xl/relaxed" style={{ color: textColor }}>
+            Explore our selection of premium coffee beans, available as green (unroasted) or expertly roasted to bring
+            out their unique flavor profiles.
           </p>
         </div>
 
-        <Tabs defaultValue="green" className="w-full">
-          <TabsList className="grid w-full max-w-md mx-auto grid-cols-2 mb-8 md:mb-12 bg-[#f5c6c6]/30">
-            <TabsTrigger value="green" className="data-[state=active]:bg-[#104B2B] data-[state=active]:text-white">
-              Green Beans
-            </TabsTrigger>
-            <TabsTrigger value="roasted" className="data-[state=active]:bg-[#1e3a6e] data-[state=active]:text-white">
-              Roasted Beans
-            </TabsTrigger>
-          </TabsList>
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
+          {/* Image on the left */}
+          <div className="relative overflow-hidden">
+            <Image
+              src="/3product.png"
+              alt="Gayo Coffee Varieties"
+              width={900}
+              height={600}
+              className="object-cover w-full"
+            />
+          </div>
 
-          {Object.entries(coffeeCatalog).map(([key, items]) => (
-            <TabsContent key={key} value={key} className="mt-0">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-                {items.map((coffee) => (
-                  <div
-                    key={coffee.id}
-                    className="bg-[#fffaf0] rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1 border border-[#e8e3d9]"
+          {/* Catalog on the right */}
+          <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-100">
+            <div className="flex flex-col gap-6">
+              {/* Coffee Varieties */}
+              <Tabs defaultValue="green" className="w-full">
+                <TabsList className="grid w-full grid-cols-2 mb-6" style={{ backgroundColor: bgColor }}>
+                  <TabsTrigger
+                    value="green"
+                    className="data-[state=active]:text-white"
                   >
-                    <div className="relative h-64 sm:h-56 md:h-64">
-                      <Image src={coffee.image} alt={coffee.name} fill className="object-cover" />
+                    <div className=" rounded-full" style={{ backgroundColor: `${secondaryColor}20` }}>
+                      <Leaf className="w-4 h-4" style={{ color: secondaryColor }} />
                     </div>
-                    <div className="p-5 md:p-6">
-                      <div className="flex justify-between items-start mb-3">
-                        <h3 className="text-lg md:text-xl font-bold text-[#1e3a6e]">{coffee.name}</h3>
-                        <Badge className="bg-[#104B2B]/10 text-[#104B2B] hover:bg-[#104B2B]/10">{coffee.type}</Badge>
+                    <span className="font-medium" style={{ color: secondaryColor }}>
+                      Green
+                    </span>
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="roasted"
+                    className="data-[state=active]:text-white"
+                  >
+                    <div className="flex items-center gap-2">
+                      <div className=" rounded-full" style={{ backgroundColor: `${primaryColor}20` }}>
+                        <Flame className="w-4 h-4" style={{ color: primaryColor }} />
                       </div>
-                      <p className="text-[#1e3a6e]/70 mb-4 text-sm md:text-base">{coffee.description}</p>
-                      <div className="mt-4 pt-4 border-t border-gray-100">
-                        <Button className="w-full bg-[#1e3a6e] text-white hover:bg-[#1e3a6e]/90 rounded-full">
-                          Contact Us
-                        </Button>
-                      </div>
+                      <span className="font-medium" style={{ color: primaryColor }}>
+                        Roasted
+                      </span>
                     </div>
+                  </TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="green" className="space-y-4">
+                  <div className="grid grid-cols-1 gap-2">
+                    {coffeeTypes.map((coffee, index) => (
+                      <div
+                        key={index}
+                        className="p-2.5 rounded-lg  flex items-center"
+                        style={{ backgroundColor: `${secondaryColor}10` }}
+                      >
+                        <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: secondaryColor }}></span>
+                        <span className="font-medium" style={{ color: textColor }}>
+                          {coffee}
+                        </span>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </TabsContent>
+
+                <TabsContent value="roasted" className="space-y-4">
+                  <div className="grid grid-cols-1 gap-2">
+                    {coffeeTypes.map((coffee, index) => (
+                      <div
+                        key={index}
+                        className="p-2.5 rounded-lg  flex items-center"
+                        style={{ backgroundColor: `${primaryColor}10` }}
+                      >
+                        <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: primaryColor }}></span>
+                        <span className="font-medium" style={{ color: primaryColor }}>
+                          {coffee}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </TabsContent>
+              </Tabs>
+
+              {/* View All Button */}
+              <div className="mt-2">
+                <Link href="/products">
+                  <Button
+                    className="gap-2 w-full text-white hover:opacity-90 transition-opacity"
+                    style={{ backgroundColor: secondaryColor }}
+                  >
+                    View All Products
+                    <ArrowRight className="w-4 h-4" />
+                  </Button>
+                </Link>
               </div>
-            </TabsContent>
-          ))}
-        </Tabs>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
+
 
