@@ -2,9 +2,7 @@ import { compare, hash } from 'bcryptjs';
 import { SignJWT, jwtVerify } from 'jose';
 import { cookies } from 'next/headers';
 import type { NewUser } from '../db/schema';
-import { config } from 'dotenv';
 
-config({ path: ".env" }); // or .env.local
 
 const key = new TextEncoder().encode(process.env.NEXT_PUBLIC_AUTH_SECRET);
 const SALT_ROUNDS = 10;

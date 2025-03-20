@@ -23,7 +23,7 @@ export default function CoffeeCatalogTabs() {
     <section className="w-full py-12" style={{ backgroundColor: bgColor }}>
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center text-center mb-10">
-          <div className="inline-block px-4 py-2 rounded-full mb-4" style={{ backgroundColor: secondaryColor }}>
+          <div className="inline-block px-4 py-2 mb-4" style={{ backgroundColor: secondaryColor }}>
             <span className="text-white font-medium">Our Catalog</span>
           </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-2" style={{ color: primaryColor }}>
