@@ -1,4 +1,4 @@
-import { Package, Flame, Handshake, Check } from "lucide-react";
+import { Package, Flame, Handshake } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 
