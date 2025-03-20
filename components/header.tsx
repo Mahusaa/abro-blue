@@ -33,7 +33,7 @@ export default function Header() {
           <Link href="#about" className="text-sm font-medium hover:text-[#f5c6c6] transition-colors">
             Our Story
           </Link>
-          <Link href="#advantages" className="text-sm font-medium hover:text-[#f5c6c6] transition-colors">
+          <Link href="#advantage" className="text-sm font-medium hover:text-[#f5c6c6] transition-colors">
             Why Choose Us
           </Link>
           <Link href="#contact" className="text-sm font-medium hover:text-[#f5c6c6] transition-colors">

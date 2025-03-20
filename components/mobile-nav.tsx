@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Menu, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { User } from "@/server/db/schema"
 import { useRouter } from "next/navigation"
 import { signOut } from "@/app/(login)/action"
@@ -20,6 +20,7 @@ export default function MobileNav({ user }: { user: User | null }) {
   }
 
 
+
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
@@ -28,6 +29,7 @@ export default function MobileNav({ user }: { user: User | null }) {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
+      <SheetTitle className="hidden">Abroastery</SheetTitle>
       <SheetContent side="right" className="w-[85%] sm:w-[350px] bg-[#1e3a6e] text-white border-l border-white/10 p-0">
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b border-white/10">
@@ -50,27 +52,27 @@ export default function MobileNav({ user }: { user: User | null }) {
               </li>
               <li>
                 <Link
-                  href="/products"
+                  href="#catalog"
                   className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  Products
+                  Catalog
                   <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
+                  href="#about"
                   className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
                   onClick={() => setOpen(false)}
                 >
-                  About Us
+                  Our Story
                   <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/#advantages"
+                  href="/#advantage"
                   className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
                   onClick={() => setOpen(false)}
                 >
@@ -118,13 +120,16 @@ export default function MobileNav({ user }: { user: User | null }) {
           <div className="p-4 border-t border-white/10">
             {!user ? (
               <Link href="/products">
-                <Button className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 hidden md:flex">
+                <Button className="w-full flex justify-center bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6">
                   Shop Now
                 </Button>
               </Link>
             ) : (
               <form action={handleSignOut}>
-                <Button type="submit" className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6 hidden md:flex">
+                <Button
+                  type="submit"
+                  className="w-full flex justify-center bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6"
+                >
                   Logout
                 </Button>
               </form>

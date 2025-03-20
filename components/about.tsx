@@ -37,11 +37,11 @@ const AboutSection = () => {
 
             {/* Quote card - adjusted for better mobile positioning */}
             <div className="absolute -bottom-6 -left-2 md:-bottom-8 md:-left-8 bg-white p-4 md:p-6 rounded-2xl shadow-lg max-w-[260px] md:max-w-[280px]">
-              <div className="text-[#1e3a6e] text-3xl md:text-4xl font-serif mb-1">{`&quot;`}</div>
+              <div className="text-[#1e3a6e] text-3xl md:text-4xl font-serif mb-1">&quot;</div>
               <p className="text-[#1e3a6e] text-sm md:text-base font-medium italic">
                 To make great coffee accessible to everyone, ensuring that every cup delivers quality and joy, no matter where you are.
               </p>
-              <p className="text-[#1e3a6e]/70 text-xs md:text-sm mt-2">— Ahmad Rizki, Founder</p>
+              <p className="text-[#1e3a6e]/70 text-xs md:text-sm mt-2">— Founder</p>
             </div>
           </div>
 
