@@ -59,9 +59,7 @@ export default function Header() {
               </Button>
             </form>
           )}
-          {user && (
-            <MobileNav user={user} />
-          )}
+          <MobileNav user={user} />
         </div>
       </div>
     </header>

@@ -10,7 +10,7 @@ import { User } from "@/server/db/schema"
 import { useRouter } from "next/navigation"
 import { signOut } from "@/app/(login)/action"
 
-export default function MobileNav({ user }: { user: User }) {
+export default function MobileNav({ user }: { user: User | null }) {
   const router = useRouter();
   const [open, setOpen] = useState(false)
   async function handleSignOut() {
