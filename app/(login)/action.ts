@@ -48,7 +48,7 @@ export const signIn = validatedAction(signInSchema, async (data) => {
   await Promise.all([
     setSession(user),
   ])
-  redirect('/');
+  redirect('/admin/products');
 });
 
 

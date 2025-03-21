@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ChevronLeft, Coffee, Target, Compass, Globe, DollarSign, Users } from "lucide-react"
+import { ChevronRight, Coffee, Target, Compass, Globe, DollarSign, Users } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 
 export default function AboutFounder() {
@@ -9,17 +9,25 @@ export default function AboutFounder() {
       {/* Page Header */}
       <section className="w-full bg-[#1e3a6e] text-white py-10 md:py-16">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <div className="flex items-center gap-2 mb-2">
-                <Link href="/" className="text-[#f5c6c6] hover:underline text-sm flex items-center">
-                  Home <ChevronLeft className="h-4 w-4 mx-1" />
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-4 px-4 md:px-0">
+            <div className="w-full">
+              {/* Breadcrumb */}
+              <div className="flex items-center gap-1 md:gap-3 text-sm">
+                <Link href="/" className="hover:underline flex items-center text-white/80">
+                  Home
+                  <ChevronRight className="h-4 w-4 ml-1 mt-0.5" />
                 </Link>
-                <span className="text-sm">About Us</span>
+                <span className="text-sm text-[#f5c6c6]">About us</span>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold">About Abroastery</h1>
+
+              {/* Title */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-3 text-white">
+                Abroastery
+              </h1>
             </div>
           </div>
+
+
         </div>
       </section>
 

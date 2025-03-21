@@ -28,28 +28,37 @@ export default function AllProducts({ products }: { products: Product[] }) {
     <main className="flex-1">
       <section className="w-full bg-[#1e3a6e] text-white py-10 md:py-16">
         <div className="container mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-            <div>
-              <div className="flex items-center gap-4">
-                <Link href="/" className="hover:underline text-sm flex items-center">
-                  Home <ChevronRight className="h-4 w-4 mt-0.5 ml-3" />
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-3 px-4 md:px-0">
+            <div className="w-full">
+              {/* Breadcrumb */}
+              <div className="flex items-center gap-2 text-sm">
+                <Link href="/" className="hover:underline flex items-center text-white/80">
+                  Home
+                  <ChevronRight className="h-4 w-4 ml-1" />
                 </Link>
                 <span className="text-sm text-[#f5c6c6]">Products</span>
               </div>
-              <h1 className="text-3xl md:text-4xl font-bold">All Products</h1>
+
+              {/* Title */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mt-2 text-white">
+                All Products
+              </h1>
             </div>
-            <div className="w-full md:w-auto flex flex-col sm:flex-row gap-3">
-              <div className="relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-[#1e3a6e]/70" />
+
+            {/* Search Input */}
+            <div className="w-full md:w-auto flex flex-col sm:flex-row gap-2 md:gap-3">
+              <div className="relative w-full sm:w-[200px] md:w-[250px]">
+                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-[#1e3a6e]/70" />
                 <Input
                   placeholder="Search products..."
-                  className="pl-10 bg-white text-[#1e3a6e] rounded-full w-full sm:w-[200px] md:w-[250px]"
+                  className="pl-10 bg-white text-[#1e3a6e] rounded-full w-full"
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                 />
               </div>
             </div>
           </div>
+
         </div>
       </section>
 
