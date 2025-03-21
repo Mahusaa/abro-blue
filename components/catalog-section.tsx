@@ -20,7 +20,7 @@ export default function CoffeeCatalogTabs() {
   const textColor = "#5d6b8a" // Gray-blue
 
   return (
-    <section className="w-full py-12" style={{ backgroundColor: bgColor }}>
+    <section id="catalog" className="w-full py-12" style={{ backgroundColor: bgColor }}>
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center text-center mb-10">
           <div className="inline-block  rounded-lg px-4 py-1 mb-4" style={{ backgroundColor: secondaryColor }}>

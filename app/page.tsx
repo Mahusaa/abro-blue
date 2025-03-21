@@ -48,7 +48,7 @@ export default function CoffeeBeanShop() {
           </div>
         </section>
         {/* Catalog Section */}
-        <section id="catalog" className="w-full bg-[#DAABAD] py-12">
+        <section id="motto" className="w-full bg-[#DAABAD] py-12">
           <div className="px-4 md:px-6 max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6">
               {/* Left Image */}
