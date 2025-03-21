@@ -19,7 +19,7 @@ export default function ContactSection() {
             Experience ABR Coffee
           </h2>
           <p className="text-[#1e3a6e]/80 text-base md:text-lg max-w-prose mx-auto">
-            Visit our shop to experience the unique flavor of Gayo coffee, meet our team, and learn more about our
+            Visit our shop to experience the unique flavor of our coffee, meet our team, and learn more about our
             sustainable sourcing practices.
           </p>
         </div>
@@ -183,7 +183,7 @@ export default function ContactSection() {
         {/* Additional CTA */}
         <div className="mt-10 md:mt-16 text-center">
           <p className="text-[#1e3a6e]/80 text-lg mb-4">
-            We&apos;d love to see you in person! Stop by for a cup of our signature Gayo coffee.
+            We&apos;d love to see you in person! Stop by for a cup of our signature Abroastery coffee.
           </p>
           <Button
             className="bg-[#104B2B] hover:bg-[#104B2B]/90 text-white px-6 py-2 h-auto"

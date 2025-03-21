@@ -128,7 +128,7 @@ export default function AboutFounder() {
             <Badge className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#f5c6c6] mb-4">Our Team</Badge>
             <h2 className="text-3xl md:text-4xl font-bold text-[#1e3a6e] mb-6">THE FOUNDERS</h2>
             <p className="text-[#1e3a6e]/80 text-lg max-w-3xl mx-auto">
-              Gayo Bean was founded by three passionate individuals with deep connections to the coffee industry and a
+              Abroastery was founded by three passionate individuals with deep connections to the coffee industry and a
               shared vision for making quality coffee accessible to everyone.
             </p>
           </div>
