@@ -174,7 +174,7 @@ export default function AboutFounder() {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-[#1e3a6e] mb-1"> Muhammad Pizzaro A</h3>
+              <h3 className="text-xl font-bold text-[#1e3a6e] mb-1"> M. Bilal P A</h3>
               <p className="text-[#104B2B] font-medium mb-6">CEO</p>
 
               <div className="space-y-3 mb-6 text-left">
