@@ -133,7 +133,7 @@ export default function AboutFounder() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-12">
+          <div className="grid md:grid-cols-2 gap-12">
             {/* Founder 1 */}
             <div className="text-center">
               <div className="mx-auto mb-6">
@@ -162,9 +162,8 @@ export default function AboutFounder() {
             </div>
 
 
-            {/* Founder 3 */}
-            <div className="text-center">
-              <div className="mx-auto mb-6">
+            <div className="text-center px-4">
+              <div className="mx-auto mb-4">
                 <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto border-4 border-[#104B2B]">
                   <Image
                     src="/billal.png"
@@ -174,46 +173,20 @@ export default function AboutFounder() {
                   />
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-[#1e3a6e] mb-1"> M. Bilal P A</h3>
-              <p className="text-[#104B2B] font-medium mb-6">CEO</p>
 
-              <div className="space-y-3 mb-6 text-left">
-                <ul className="text-[#1e3a6e]/80 text-sm space-y-1">
-                  <li>• CPO at Khas Studio</li>
-                  <li>• Founder & CEO of PT Lamoenan Diraya Rasamulya</li>
-                  <li>• COO of PT Catur Elang Pancarasa</li>
-                  <li>• Co-Founder & CEO of Kioto Japanese Food</li>
-                  <li>• Co-Founder & CEO of Japanizu</li>
-                  <li>• Co-Founder & CEO of PT Anugrah Bisnis Consulting</li>
-                  <li>• Researcher at PT Segara Evlogia Nusantara</li>
-                </ul>
-              </div>
+              <h3 className="text-xl font-bold text-[#1e3a6e] mb-1">M. Bilal P A</h3>
+              <p className="text-[#104B2B] font-medium mb-4">CEO</p>
+
+              <ul className="text-[#1e3a6e]/80 text-sm space-y-1 max-w-xs mx-auto text-left">
+                <li>• CPO at Khas Studio</li>
+                <li>• Founder & CEO of PT Lamoenan Diraya Rasamulya</li>
+                <li>• COO of PT Catur Elang Pancarasa</li>
+                <li>• Co-Founder & CEO of Kioto Japanese Food</li>
+                <li>• Co-Founder & CEO of Japanizu</li>
+                <li>• Co-Founder & CEO of PT Anugrah Bisnis Consulting</li>
+                <li>• Researcher at PT Segara Evlogia Nusantara</li>
+              </ul>
             </div>
-
-            {/* Founder 2 */}
-            <div className="text-center">
-              <div className="mx-auto mb-6">
-                <div className="relative w-40 h-40 rounded-full overflow-hidden mx-auto border-4 border-[#104B2B]">
-                  <Image
-                    src="/rizkyputra.png"
-                    alt="Siti Aminah"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <h3 className="text-xl font-bold text-[#1e3a6e] mb-1"> Muhammad Rizky Pradeza</h3>
-              <p className="text-[#104B2B] font-medium mb-6">Co - CEO</p>
-
-              <div className="space-y-3 mb-6 text-left">
-                <ul className="text-[#1e3a6e]/80 text-sm space-y-1">
-                  <li>• Business Consultant at Plantations Internationals</li>
-                  <li>• Senior Sales & Marketing at PT. Multiviscomindo</li>
-                  <li>• Founder of KOPINDO</li>
-                </ul>
-              </div>
-            </div>
-
           </div>
         </div>
       </section>

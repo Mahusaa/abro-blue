@@ -1,9 +1,10 @@
 "use client"
 
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Clock, Facebook, Instagram, Mail, MapPin, Phone, Twitter } from "lucide-react"
+import React from 'react';
+import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent } from '@/components/ui/card';
 
 export default function ContactSection() {
   return (
@@ -37,14 +38,7 @@ export default function ContactSection() {
                   </div>
                   <div>
                     <p className="font-semibold text-[#1e3a6e] text-base">Address</p>
-                    <p className="text-[#1e3a6e]/80 text-base mt-1">123 Coffee Street, Bean City, BC 12345</p>
-                    <Button
-                      variant="link"
-                      className="text-[#104B2B] p-0 h-auto mt-1 font-medium"
-                      onClick={() => window.open("https://maps.google.com", "_blank")}
-                    >
-                      Get Directions
-                    </Button>
+                    <p className="text-[#1e3a6e]/80 text-base mt-1">Jl Teluk Bone No.101c2 Pasar Minggu Jakarta Selatan</p>
                   </div>
                 </div>
 
@@ -73,27 +67,8 @@ export default function ContactSection() {
                       href="mailto:hello@gayobean.com"
                       className="text-[#1e3a6e]/80 text-base mt-1 block hover:text-[#104B2B] transition-colors"
                     >
-                      hello@gayobean.com
+                      admin@abroastery.com
                     </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4 group">
-                  <div className="bg-[#104B2B]/10 p-3 rounded-full flex-shrink-0 group-hover:bg-[#104B2B]/20 transition-colors duration-300">
-                    <Clock className="text-[#104B2B] h-5 w-5" />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-[#1e3a6e] text-base">Hours</p>
-                    <div className="mt-1 space-y-1">
-                      <div className="flex justify-between max-w-[250px]">
-                        <p className="text-[#1e3a6e]/80 text-base">Monday - Friday:</p>
-                        <p className="text-[#1e3a6e] font-medium text-base">7am - 7pm</p>
-                      </div>
-                      <div className="flex justify-between max-w-[250px]">
-                        <p className="text-[#1e3a6e]/80 text-base">Saturday - Sunday:</p>
-                        <p className="text-[#1e3a6e] font-medium text-base">8am - 6pm</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -102,21 +77,27 @@ export default function ContactSection() {
                 <h3 className="text-xl font-bold text-[#1e3a6e] mb-4">Follow Us</h3>
                 <div className="flex gap-3">
                   <a
-                    href="#"
+                    href="https://instagram.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-[#104B2B]/10 p-3 rounded-full text-[#104B2B] hover:bg-[#104B2B] hover:text-white transition-all duration-300"
                     aria-label="Instagram"
                   >
                     <Instagram className="h-5 w-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://facebook.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-[#104B2B]/10 p-3 rounded-full text-[#104B2B] hover:bg-[#104B2B] hover:text-white transition-all duration-300"
                     aria-label="Facebook"
                   >
                     <Facebook className="h-5 w-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://twitter.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-[#104B2B]/10 p-3 rounded-full text-[#104B2B] hover:bg-[#104B2B] hover:text-white transition-all duration-300"
                     aria-label="Twitter"
                   >
@@ -127,75 +108,21 @@ export default function ContactSection() {
             </CardContent>
           </Card>
 
-          {/* Map */}
-          <Card className="lg:col-span-7 bg-white/95 backdrop-blur-sm border-none shadow-xl rounded-2xl overflow-hidden h-full">
-            <CardContent className="p-0 h-full">
-              <div className="relative h-full w-full min-h-[400px]">
-                {/* This would be replaced with an actual map component in production */}
-                <div className="absolute inset-0 bg-[#f0f0f0] overflow-hidden">
-                  <div className="w-full h-full relative">
-                    <div className="absolute inset-0 bg-[url('/placeholder.svg?height=800&width=1200')] bg-cover bg-center opacity-70"></div>
-                    <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#104B2B]/10"></div>
-
-                    {/* Map Pin */}
-                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-bounce-slow">
-                      <div className="relative">
-                        <div className="absolute -top-16 -left-[100px] bg-white p-4 rounded-lg shadow-lg min-w-[200px]">
-                          <p className="font-semibold text-[#1e3a6e] text-lg">ABR Coffee</p>
-                          <p className="text-[#1e3a6e]/80">123 Coffee Street</p>
-                          <p className="text-[#1e3a6e]/80 text-sm mt-1">Bean City, BC 12345</p>
-                        </div>
-                        <div className="h-12 w-12 bg-[#104B2B] rounded-full flex items-center justify-center shadow-lg">
-                          <MapPin className="h-7 w-7 text-white" />
-                        </div>
-                        <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-[#104B2B] rotate-45"></div>
-                      </div>
-                    </div>
-
-                    {/* Map Controls */}
-                    <div className="absolute bottom-4 right-4 flex flex-col gap-2">
-                      <Button size="icon" variant="secondary" className="h-10 w-10 rounded-full shadow-md">
-                        <span className="text-lg font-bold">+</span>
-                      </Button>
-                      <Button size="icon" variant="secondary" className="h-10 w-10 rounded-full shadow-md">
-                        <span className="text-lg font-bold">-</span>
-                      </Button>
-                    </div>
-
-                    {/* Map Legend */}
-                    <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm p-3 rounded-lg shadow-md">
-                      <div className="flex items-center gap-2">
-                        <div className="h-3 w-3 bg-[#104B2B] rounded-full"></div>
-                        <span className="text-sm text-[#1e3a6e]">Our Location</span>
-                      </div>
-                      <div className="flex items-center gap-2 mt-1">
-                        <div className="h-3 w-3 bg-[#1e3a6e]/40 rounded-full"></div>
-                        <span className="text-sm text-[#1e3a6e]">Parking</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
+          <Card className="lg:col-span-7 bg-white/95 backdrop-blur-sm border-none shadow-xl rounded-2xl overflow-hidden flex flex-col">
+            <div className="h-80 md:h-96 w-full relative">
+              {/* Real Google Maps iframe */}
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.886246153366!2d106.83780291476898!3d-6.277496995454999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f206da2eade3%3A0x18ceb6c3b41e29aa!2sJl.%20Teluk%20Bone%20No.101%2C%20RW.5%2C%20Ps.%20Minggu%2C%20Kec.%20Ps.%20Minggu%2C%20Kota%20Jakarta%20Selatan%2C%20Daerah%20Khusus%20Ibukota%20Jakarta%2012540%2C%20Indonesia!5e0!3m2!1sen!2sus!4v1652687539673!5m2!1sen!2sus"
+                style={{ border: 0 }}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute top-0 left-0 w-full h-full"
+                title="ABR Coffee Location"
+              ></iframe>
+            </div>
           </Card>
-        </div>
-
-        {/* Additional CTA */}
-        <div className="mt-10 md:mt-16 text-center">
-          <p className="text-[#1e3a6e]/80 text-lg mb-4">
-            We&apos;d love to see you in person! Stop by for a cup of our signature Abroastery coffee.
-          </p>
-          <Button
-            className="bg-[#104B2B] hover:bg-[#104B2B]/90 text-white px-6 py-2 h-auto"
-            onClick={() => window.open("https://maps.google.com", "_blank")}
-          >
-            <MapPin className="h-4 w-4 mr-2" />
-            Get Directions
-          </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }
-
-
