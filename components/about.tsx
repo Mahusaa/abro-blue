@@ -6,10 +6,7 @@ const AboutSection = () => {
   return (
     <section id="about" className="w-full bg-[#f8f3e9] py-10 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="hidden md:flex flex-col items-center justify-center text-center gap-4">
-          <Badge className="bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#f5c6c6]">
-            Our Story
-          </Badge>
+        <div className="hidden md:flex flex-col items-center justify-center text-center ">
           <h2 className="text-2xl md:text-4xl font-bold text-[#1e3a6e]">
             SUSTAINABLE COFFEE CULTIVATION
           </h2>

@@ -1,26 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import { getUser } from "@/server/db/queries";
 import { UserProvider } from "@/server/auth";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "AB Roastery",
   description: " At AB Roastery (ABR), we are committed to delivering high-quality coffee experiences through our carefully crafted products and services",
   icons: [{ rel: "icon", url: "/icobulet.ico" }],
 };
+
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-manrope',
+  display: 'swap',
+})
+
 
 export default function RootLayout({
   children,
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.className} antialiased`}
       >
         <UserProvider userPromise={userPromise}>
           <Header />

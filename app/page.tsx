@@ -51,7 +51,6 @@ export default function CoffeeBeanShop() {
         <section id="motto" className="w-full bg-[#DAABAD] py-12">
           <div className="px-4 md:px-6 max-w-6xl mx-auto">
             <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6">
-              {/* Left Image */}
               <div className="md:w-1/6 flex justify-center">
                 <Image
                   src="/beans.png"

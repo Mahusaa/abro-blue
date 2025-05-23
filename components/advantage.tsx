@@ -1,5 +1,4 @@
 import { Package, Flame, Handshake } from "lucide-react";
-import { Badge } from "./ui/badge";
 
 
 const advantages = [
@@ -44,7 +43,6 @@ export default function AdvantagesSection() {
     <section id="advantage" className="w-full bg-gradient-to-b from-[#1e3a6e] to-[#152b50] text-white py-12 md:py-20">
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-8 md:mb-12 max-w-2xl mx-auto">
-          <Badge className="bg-[#daabad] text-[#1e3a6e] hover:bg-[#f5c6c6] mb-3 py-1 px-3 text-sm font-medium">Why Choose Us</Badge>
           <h2 className="text-2xl md:text-4xl font-bold mb-4 tracking-tight">AB Roasting is Different</h2>
           <p className="text-gray-300 text-base md:text-lg leading-relaxed">
             What sets our coffee apart is our commitment to quality, sustainability, and the perfect coffee experience.

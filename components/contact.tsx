@@ -3,7 +3,6 @@
 import React from 'react';
 import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
 
-import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 
 export default function ContactSection() {
@@ -11,11 +10,6 @@ export default function ContactSection() {
     <section id="contact" className="w-full bg-gradient-to-b from-[#f5c6c6] to-[#f8d7d7] py-16 md:py-24 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 md:mb-16 max-w-xl md:max-w-2xl mx-auto">
-          <div className="inline-block animate-fade-in">
-            <Badge className="bg-[#104B2B] text-white hover:bg-[#104B2B]/90 mb-3 md:mb-4 px-3 py-1 text-sm">
-              Visit Us
-            </Badge>
-          </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#1e3a6e] mb-4 md:mb-5 tracking-tight">
             Experience ABR Coffee
           </h2>
@@ -52,7 +46,7 @@ export default function ContactSection() {
                       href="tel:+15551234567"
                       className="text-[#1e3a6e]/80 text-base mt-1 block hover:text-[#104B2B] transition-colors"
                     >
-                      (555) 123-4567
+                      +62 812-1411-0034
                     </a>
                   </div>
                 </div>

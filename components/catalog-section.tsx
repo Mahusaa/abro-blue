@@ -4,15 +4,19 @@ import { ArrowRight, Leaf, Flame } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { getProducts } from "@/server/db/queries"
 
-export default function CoffeeCatalogTabs() {
-  const coffeeTypes = [
-    "Arabika Gayo Speciality",
-    "Arabica Gayo Premium",
-    "Arabica Gayo Grade 1",
-    "Arabika Gayo Asalan",
-    "Robusta Gayo",
-  ]
+export default async function CoffeeCatalogTabs() {
+  const allProduct = await getProducts()
+
+  const greenCoffees = allProduct.filter(product =>
+    product.category.toLowerCase().includes('green')
+  )
+
+  const roastedCoffees = allProduct.filter(product =>
+    product.category.toLowerCase().includes('roasted')
+  )
+
 
   const bgColor = "#f5f2e9"
   const primaryColor = "#2a4178" // Navy blue
@@ -23,9 +27,6 @@ export default function CoffeeCatalogTabs() {
     <section id="catalog" className="w-full py-12" style={{ backgroundColor: bgColor }}>
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center text-center mb-10">
-          <div className="inline-block  rounded-lg px-4 py-1 mb-4" style={{ backgroundColor: secondaryColor }}>
-            <span className="text-[#f5f2e9] font-medium">Our Catalog</span>
-          </div>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-2" style={{ color: primaryColor }}>
             AB Roastery Collection
           </h2>
@@ -57,19 +58,21 @@ export default function CoffeeCatalogTabs() {
                     value="green"
                     className="data-[state=active]:text-white"
                   >
-                    <div className=" rounded-full" style={{ backgroundColor: `${secondaryColor}20` }}>
-                      <Leaf className="w-4 h-4" style={{ color: secondaryColor }} />
+                    <div className="flex items-center gap-2">
+                      <div className="rounded-full" style={{ backgroundColor: `${secondaryColor}20` }}>
+                        <Leaf className="w-4 h-4" style={{ color: secondaryColor }} />
+                      </div>
+                      <span className="font-medium" style={{ color: secondaryColor }}>
+                        Green
+                      </span>
                     </div>
-                    <span className="font-medium" style={{ color: secondaryColor }}>
-                      Green
-                    </span>
                   </TabsTrigger>
                   <TabsTrigger
                     value="roasted"
                     className="data-[state=active]:text-white"
                   >
                     <div className="flex items-center gap-2">
-                      <div className=" rounded-full" style={{ backgroundColor: `${primaryColor}20` }}>
+                      <div className="rounded-full" style={{ backgroundColor: `${primaryColor}20` }}>
                         <Flame className="w-4 h-4" style={{ color: primaryColor }} />
                       </div>
                       <span className="font-medium" style={{ color: primaryColor }}>
@@ -81,15 +84,15 @@ export default function CoffeeCatalogTabs() {
 
                 <TabsContent value="green" className="space-y-4">
                   <div className="grid grid-cols-1 gap-2">
-                    {coffeeTypes.map((coffee, index) => (
+                    {greenCoffees.map((coffee) => (
                       <div
-                        key={index}
-                        className="p-2.5 rounded-lg  flex items-center"
+                        key={coffee.id}
+                        className="p-2.5 rounded-lg flex items-center"
                         style={{ backgroundColor: `${secondaryColor}10` }}
                       >
                         <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: secondaryColor }}></span>
                         <span className="font-medium" style={{ color: textColor }}>
-                          {coffee}
+                          {coffee.name}
                         </span>
                       </div>
                     ))}
@@ -98,24 +101,25 @@ export default function CoffeeCatalogTabs() {
 
                 <TabsContent value="roasted" className="space-y-4">
                   <div className="grid grid-cols-1 gap-2">
-                    {coffeeTypes.map((coffee, index) => (
+                    {roastedCoffees.map((coffee) => (
                       <div
-                        key={index}
-                        className="p-2.5 rounded-lg  flex items-center"
+                        key={coffee.id}
+                        className="p-2.5 rounded-lg flex items-center"
                         style={{ backgroundColor: `${primaryColor}10` }}
                       >
                         <span className="w-2 h-2 rounded-full mr-3" style={{ backgroundColor: primaryColor }}></span>
                         <span className="font-medium" style={{ color: primaryColor }}>
-                          {coffee}
+                          {coffee.name}
                         </span>
                       </div>
                     ))}
                   </div>
                 </TabsContent>
+                <p className="text-gray-400 text-sm">*Contact us for pricing details (negotiable)</p>
               </Tabs>
 
               {/* View All Button */}
-              <div className="mt-2">
+              <div>
                 <Link href="/products">
                   <Button
                     className="gap-2 w-full text-white hover:opacity-90 transition-opacity"
@@ -133,5 +137,3 @@ export default function CoffeeCatalogTabs() {
     </section>
   )
 }
-
-
