@@ -67,7 +67,7 @@ const carouselSlides = [
       <>
         <div className="py-6 px-4 bg-white/50 rounded-lg">
           <p className="italic text-base md:text-lg text-[#1e3a6e] text-center">
-            “To make great coffee accessible to everyone, ensuring that every cup delivers quality and joy, no matter where you are.”
+            &quot;To make great coffee accessible to everyone, ensuring that every cup delivers quality and joy, no matter where you are.”
           </p>
         </div>
       </>
