@@ -50,7 +50,7 @@ const carouselSlides = [
         <div className="flex items-center gap-4 py-2">
           <div className="hidden md:block h-10 w-1 bg-[#1e3a6e]"></div>
           <p className="text-sm font-medium text-[#1e3a6e]">
-            We don't just grow the beans - we also serve them. As coffee shop owners, we understand every stage of
+            We dont just grow the beans - we also serve them. As coffee shop owners, we understand every stage of
             the journey from crop to cup, ensuring quality at the farm and the finish.
           </p>
         </div>
