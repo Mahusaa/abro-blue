@@ -118,9 +118,20 @@ export default function AllProducts({ products }: { products: Product[] }) {
                           <p className="text-[#1e3a6e]/70 mb-4 text-sm md:text-base italic">No description available.</p>
                         )}
 
-                        <div className="mt-auto pt-4 border-t border-gray-100 flex flex-col">
-                          <Button className="w-full bg-[#1e3a6e] text-white hover:bg-[#104B2B] rounded-full shadow-sm font-semibold text-base py-2" aria-label={`Contact us about ${product.name}`}>Contact Us</Button>
-                        </div>
+                        <a
+                          href="https://wa.me/6281214110034"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-auto pt-4 border-t border-gray-100 flex flex-col"
+                        >
+                          <Button
+                            className="w-full bg-[#1e3a6e] text-white hover:bg-[#104B2B] rounded-full shadow-sm font-semibold text-base py-2"
+                            aria-label={`Contact us about ${product.name}`}
+                          >
+                            Contact Us
+                          </Button>
+                        </a>
+
                       </div>
                     </div>
                   ))
