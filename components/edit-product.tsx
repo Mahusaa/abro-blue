@@ -113,7 +113,7 @@ export default function EditProduct({ product }: { product: Product }) {
           </Link>
           <Button
             type="submit"
-            className="bg-[#104B2B] hover:bg-[#104B2B]/90"
+            className="bg-[#9DC183] hover:bg-[#9DC183]/90"
             disabled={isPending}
           >
             {isPending ? (

@@ -8,8 +8,8 @@ import Header from "@/components/header";
 
 
 export const metadata: Metadata = {
-  title: "AB Roastery",
-  description: " At AB Roastery (ABR), we are committed to delivering high-quality coffee experiences through our carefully crafted products and services",
+  title: "Kayana",
+  description: " At Kayana, we are committed to delivering high-quality coffee experiences through our carefully crafted products and services",
   icons: [{ rel: "icon", url: "/icobulet.ico" }],
 };
 

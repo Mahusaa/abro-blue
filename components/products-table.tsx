@@ -67,7 +67,7 @@ export default function ProductsTable({ products }: { products: Product[] }) {
           <p className="text-muted-foreground">Manage your coffee product catalog.</p>
         </div>
         <Link href="/admin/products/new">
-          <Button className="bg-[#104B2B] hover:bg-[#104B2B]/90">
+          <Button className="bg-[#9DC183] hover:bg-[#9DC183]/90">
             <Plus className="mr-2 h-4 w-4" /> Add Product
           </Button>
         </Link>
@@ -126,14 +126,14 @@ export default function ProductsTable({ products }: { products: Product[] }) {
                         {product.category === "green" ? (
                           <Badge
                             variant="outline"
-                            className="bg-[#104B2B]/10 text-[#104B2B] hover:bg-[#104B2B]/10 border-[#104B2B]/20"
+                            className="bg-[#9DC183]/10 text-[#9DC183] hover:bg-[#9DC183]/10 border-[#9DC183]/20"
                           >
                             {product.category}
                           </Badge>
                         ) : (
                           <Badge
                             variant="outline"
-                            className="bg-[#1e3a6e]/10 text-[#1e3a6e] hover:bg-[#1e3a6e]/10 border-[#1e3a6e]/20"
+                            className="bg-[#893F26]/10 text-[#893F26] hover:bg-[#893F26]/10 border-[#893F26]/20"
                           >
                             {product.category}
                           </Badge>

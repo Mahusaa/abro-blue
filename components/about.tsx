@@ -48,8 +48,8 @@ const carouselSlides = [
         cultivated directly by us - the landowners and farmers - with a deep commitment to sustainability,
         transparency, and traceability.
         <div className="flex items-center gap-4 py-2">
-          <div className="hidden md:block h-10 w-1 bg-[#1e3a6e]"></div>
-          <p className="text-sm font-medium text-[#1e3a6e]">
+                  <div className="hidden md:block h-10 w-1 bg-[#9DC183]"></div>
+        <p className="text-sm font-medium text-[#000000]">
             We dont just grow the beans - we also serve them. As coffee shop owners, we understand every stage of
             the journey from crop to cup, ensuring quality at the farm and the finish.
           </p>
@@ -66,7 +66,7 @@ const carouselSlides = [
 
       <>
         <div className="py-6 px-4 bg-white/50 rounded-lg">
-          <p className="italic text-base md:text-lg text-[#1e3a6e] text-center">
+          <p className="italic text-base md:text-lg text-[#000000] text-center">
             &quot;To make great coffee accessible to everyone, ensuring that every cup delivers quality and joy, no matter where you are.”
           </p>
         </div>
@@ -88,7 +88,7 @@ const AboutSection = () => {
   const getIndex = (idx: number) => (idx + total) % total;
 
   return (
-    <section id="about" className="w-full bg-[#f8f3e9] py-10 md:py-24 overflow-hidden">
+          <section id="about" className="w-full bg-[#FFFFFF] py-10 md:py-24 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
           {/* Layered Carousel */}
@@ -147,7 +147,7 @@ const AboutSection = () => {
               <div className="flex items-center gap-4">
                 <button
                   onClick={prevImage}
-                  className="bg-[#f5c6c6]/80 hover:bg-[#f5c6c6] text-[#1e3a6e] rounded-full p-2 shadow-md"
+                  className="bg-[#893F26]/80 hover:bg-[#893F26] text-white rounded-full p-2 shadow-md"
                   aria-label="Previous image"
                 >
                   &#8592;
@@ -156,13 +156,13 @@ const AboutSection = () => {
                   {carouselSlides.map((_, idx) => (
                     <span
                       key={idx}
-                      className={`h-2 w-2 rounded-full ${idx === current ? 'bg-[#1e3a6e]' : 'bg-[#f5c6c6]'}`}
+                      className={`h-2 w-2 rounded-full ${idx === current ? 'bg-[#9DC183]' : 'bg-[#893F26]'}`}
                     />
                   ))}
                 </div>
                 <button
                   onClick={nextImage}
-                  className="bg-[#f5c6c6]/80 hover:bg-[#f5c6c6] text-[#1e3a6e] rounded-full p-2 shadow-md"
+                  className="bg-[#893F26]/80 hover:bg-[#893F26] text-white rounded-full p-2 shadow-md"
                   aria-label="Next image"
                 >
                   &#8594;
@@ -174,12 +174,12 @@ const AboutSection = () => {
           {/* Dynamic Content section */}
           <div className="space-y-6 md:space-y-8">
             <div className="md:hidden">
-              <h2 className="text-2xl md:text-4xl font-bold text-[#1e3a6e]">
+              <h2 className="text-2xl md:text-4xl font-bold text-[#000000]">
                 {carouselSlides[current].title}
               </h2>
             </div>
-            <div className="space-y-4 text-[#1e3a6e]/80">
-              <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-[#1e3a6e] mb-2">
+            <div className="space-y-4 text-[#000000]/80">
+              <h3 className="hidden md:block text-2xl md:text-3xl font-bold text-[#000000] mb-2">
                 {carouselSlides[current].title}
               </h3>
               <div className="leading-relaxed lg:mt-8">

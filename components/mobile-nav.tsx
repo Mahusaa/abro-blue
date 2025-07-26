@@ -29,12 +29,12 @@ export default function MobileNav({ user }: { user: User | null }) {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetTitle className="hidden">Abroastery</SheetTitle>
-      <SheetContent side="right" className="w-[85%] sm:w-[350px] bg-[#1e3a6e] text-white border-l border-white/10 p-0">
+      <SheetTitle className="hidden">Kayana</SheetTitle>
+      <SheetContent side="right" className="w-[85%] sm:w-[350px] bg-[#9DC183] text-white border-l border-white/10 p-0">
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center gap-2">
-              <Image src="/logoo.jpg" alt="abr logo" width={50} height={50} />
+              <Image src="/logoo.jpg" alt="kayana logo" width={50} height={50} />
             </div>
           </div>
 
@@ -43,61 +43,61 @@ export default function MobileNav({ user }: { user: User | null }) {
               <li>
                 <Link
                   href="/"
-                  className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
+                  className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   Home
-                  <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
+                  <ChevronRight className="h-5 w-5 text-[#893F26]" />
                 </Link>
               </li>
               <li>
                 <Link
                   href="#catalog"
-                  className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
+                  className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   Catalog
-                  <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
+                  <ChevronRight className="h-5 w-5 text-[#893F26]" />
                 </Link>
               </li>
               <li>
                 <Link
                   href="#about"
-                  className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
+                  className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   Our Story
-                  <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
+                  <ChevronRight className="h-5 w-5 text-[#893F26]" />
                 </Link>
               </li>
               <li>
                 <Link
                   href="/#advantage"
-                  className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
+                  className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   Why Choose Us
-                  <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
+                  <ChevronRight className="h-5 w-5 text-[#893F26]" />
                 </Link>
               </li>
               <li>
                 <Link
                   href="/about"
-                  className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
+                  className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   About
-                  <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
+                  <ChevronRight className="h-5 w-5 text-[#893F26]" />
                 </Link>
               </li>
               <li>
                 <Link
                   href="/#contact"
-                  className="flex items-center justify-between text-lg font-medium hover:text-[#f5c6c6] transition-colors"
+                  className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
                   Visit Us
-                  <ChevronRight className="h-5 w-5 text-[#f5c6c6]" />
+                  <ChevronRight className="h-5 w-5 text-[#893F26]" />
                 </Link>
               </li>
             </ul>
@@ -108,7 +108,7 @@ export default function MobileNav({ user }: { user: User | null }) {
                 <li>
                   <Link
                     href="/products?type=green"
-                    className="flex items-center text-base hover:text-[#f5c6c6] transition-colors"
+                    className="flex items-center text-base hover:text-[#893F26] transition-colors"
                     onClick={() => setOpen(false)}
                   >
                     Green Beans
@@ -117,7 +117,7 @@ export default function MobileNav({ user }: { user: User | null }) {
                 <li>
                   <Link
                     href="/products?type=roasted"
-                    className="flex items-center text-base hover:text-[#f5c6c6] transition-colors"
+                    className="flex items-center text-base hover:text-[#893F26] transition-colors"
                     onClick={() => setOpen(false)}
                   >
                     Roasted Beans
@@ -130,18 +130,18 @@ export default function MobileNav({ user }: { user: User | null }) {
           <div className="p-4 border-t border-white/10">
             {!user ? (
               <Link href="/products">
-                <Button className="w-full flex justify-center bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6">
+                <Button className="w-full flex justify-center bg-[#893F26] text-white hover:bg-[#7a361f] font-medium rounded-full px-6">
                   Shop Now
                 </Button>
               </Link>
             ) : (
               <form action={handleSignOut}>
-                <Button
-                  type="submit"
-                  className="w-full flex justify-center bg-[#f5c6c6] text-[#1e3a6e] hover:bg-[#e5b6b6] font-medium rounded-full px-6"
-                >
-                  Logout
-                </Button>
+                                  <Button
+                    type="submit"
+                    className="w-full flex justify-center bg-[#893F26] text-white hover:bg-[#7a361f] font-medium rounded-full px-6"
+                  >
+                    Logout
+                  </Button>
               </form>
             )}
           </div>

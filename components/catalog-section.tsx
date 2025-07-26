@@ -18,17 +18,17 @@ export default async function CoffeeCatalogTabs() {
   )
 
 
-  const bgColor = "#f5f2e9"
-  const primaryColor = "#2a4178" // Navy blue
-  const secondaryColor = "#0a4d2e" // Dark green
-  const textColor = "#5d6b8a" // Gray-blue
+  const bgColor = "#FFFFFF"
+  const primaryColor = "#9DC183" // Main green
+  const secondaryColor = "#893F26" // Brown
+  const textColor = "#000000" // Black
 
   return (
     <section id="catalog" className="w-full py-12" style={{ backgroundColor: bgColor }}>
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex flex-col items-center text-center mb-10">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-2" style={{ color: primaryColor }}>
-            AB Roastery Collection
+            Kayana Collection
           </h2>
           <p className="max-w-[700px] md:text-xl/relaxed" style={{ color: textColor }}>
             Explore our selection of premium coffee beans, available as green (unroasted) or expertly roasted to bring
