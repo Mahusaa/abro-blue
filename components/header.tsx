@@ -21,7 +21,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 w-full bg-[#9DC183] text-white shadow-md px-2">
       <div className="flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logoo.jpg" alt="kayana logo" width={100} height={100} />
+          <Image src="/kayana.png" alt="kayana logo" width={100} height={100} />
         </Link>
         <nav className="hidden md:flex items-center gap-8">
           <Link href="/" className="text-sm font-medium hover:text-[#893F26] transition-colors">

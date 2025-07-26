@@ -9,11 +9,11 @@ export default function Footer() {
           <div className="col-span-2 md:col-span-1 mb-6 md:mb-0">
             <div className="flex items-center mb-4">
               <Image
-                src="/logolong.jpg"
+                src="/kayana.png"
                 alt="logolong"
                 width={200}
                 height={50}
-                className="w-full max-w-[200px]"
+                className="w-full max-w-[100px]"
               />
             </div>
             <p className="text-xs md:text-sm text-gray-300">

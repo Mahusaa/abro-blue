@@ -10,7 +10,7 @@ export default function ContactSection() {
     <section id="contact" className="w-full bg-gradient-to-b from-[#FFFFFF] to-[#f8f8f8] py-16 md:py-24 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12 md:mb-16 max-w-xl md:max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#000000] mb-4 md:mb-5 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#9DC183] mb-4 md:mb-5 tracking-tight">
             Experience Kayana Coffee
           </h2>
           <p className="text-[#000000]/80 text-base md:text-lg max-w-prose mx-auto">
@@ -27,12 +27,12 @@ export default function ContactSection() {
 
               <div className="space-y-5 md:space-y-6">
                 <div className="flex items-start gap-4 group">
-                              <div className="bg-[#9DC183]/10 p-3 rounded-full flex-shrink-0 group-hover:bg-[#9DC183]/20 transition-colors duration-300">
-              <MapPin className="text-[#9DC183] h-5 w-5" />
-            </div>
-            <div>
-              <p className="font-semibold text-[#000000] text-base">Address</p>
-              <p className="text-[#000000]/80 text-base mt-1">Jl Teluk Bone No.101c2 Pasar Minggu Jakarta Selatan</p>
+                  <div className="bg-[#9DC183]/10 p-3 rounded-full flex-shrink-0 group-hover:bg-[#9DC183]/20 transition-colors duration-300">
+                    <MapPin className="text-[#9DC183] h-5 w-5" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-[#000000] text-base">Address</p>
+                    <p className="text-[#000000]/80 text-base mt-1">Jl Teluk Bone No.101c2 Pasar Minggu Jakarta Selatan</p>
                   </div>
                 </div>
 

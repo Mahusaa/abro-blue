@@ -40,7 +40,7 @@ export default async function CoffeeCatalogTabs() {
           {/* Image on the left */}
           <div className="relative overflow-hidden">
             <Image
-              src="/3product.png"
+              src="/50kgs.png"
               alt="Gayo Coffee Varieties"
               width={900}
               height={600}

@@ -34,7 +34,7 @@ export default function MobileNav({ user }: { user: User | null }) {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b border-white/10">
             <div className="flex items-center gap-2">
-              <Image src="/logoo.jpg" alt="kayana logo" width={50} height={50} />
+              <Image src="/kayana.png" alt="kayana logo" width={50} height={50} />
             </div>
           </div>
 
@@ -136,12 +136,12 @@ export default function MobileNav({ user }: { user: User | null }) {
               </Link>
             ) : (
               <form action={handleSignOut}>
-                                  <Button
-                    type="submit"
-                    className="w-full flex justify-center bg-[#893F26] text-white hover:bg-[#7a361f] font-medium rounded-full px-6"
-                  >
-                    Logout
-                  </Button>
+                <Button
+                  type="submit"
+                  className="w-full flex justify-center bg-[#893F26] text-white hover:bg-[#7a361f] font-medium rounded-full px-6"
+                >
+                  Logout
+                </Button>
               </form>
             )}
           </div>

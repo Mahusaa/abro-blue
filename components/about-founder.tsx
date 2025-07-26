@@ -7,7 +7,7 @@ export default function AboutFounder() {
   return (
     <main className="flex-1">
       {/* Page Header */}
-      <section className="w-full bg-[#1e3a6e] text-white py-10 md:py-16">
+      <section className="w-full bg-[#9DC183] text-white py-10 md:py-16">
         <div className="container mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-2 md:gap-4 px-4 md:px-0">
             <div className="w-full">

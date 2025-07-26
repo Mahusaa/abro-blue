@@ -18,7 +18,7 @@ export default function HeroSection() {
       </div>
 
       {/* Regular background for desktop */}
-              <div className="hidden md:block absolute inset-0 bg-[#9DC183]"></div>
+      <div className="hidden md:block absolute inset-0 bg-[#9DC183]"></div>
 
       {/* Content container */}
       <div className="relative py-8 md:py-8 px-4 md:px-10">
@@ -37,7 +37,7 @@ export default function HeroSection() {
                 </Badge>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
-                <span className="text-[#893F26]">Roasting Passion,</span>
+                <span className="text-white">Roasting Passion,</span>
                 <br />
                 <span className="text-white">Serving Perfection</span>
               </h1>
@@ -49,17 +49,17 @@ export default function HeroSection() {
             {/* Certification section */}
             <div className="flex flex-row gap-4 py-2 bg-[#9DC183]/80 rounded p-3">
               <div className="flex items-center gap-2">
-                <Award className="w-8 h-8 text-[#893F26]" />
+                <Award className="w-8 h-8 text-gray-300" />
                 <div>
                   <p className="font-medium text-sm">Control Union Certified</p>
-                  <p className="text-xs text-gray-300">Organic Certification</p>
+                  <p className="text-xs text-white">Organic Certification</p>
                 </div>
               </div>
               <div className="flex items-center gap-2">
-                <Award className="w-8 h-8 text-[#893F26]" />
+                <Award className="w-8 h-8 text-gray-300" />
                 <div>
                   <p className="font-medium text-sm">Control Union Certified</p>
-                  <p className="text-xs text-gray-300">Fairtrade Certification</p>
+                  <p className="text-xs text-white">Fairtrade Certification</p>
                 </div>
               </div>
             </div>

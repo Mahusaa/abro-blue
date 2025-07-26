@@ -53,7 +53,7 @@ export default function CoffeeBeanShop() {
             <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6">
               <div className="md:w-1/6 flex justify-center">
                 <Image
-                  src="/beans.png"
+                  src="/3prod.png"
                   alt="Coffee beans"
                   width={150}
                   height={225}
@@ -76,7 +76,7 @@ export default function CoffeeBeanShop() {
               {/* Right Image */}
               <div className="md:w-1/6 flex justify-center">
                 <Image
-                  src="/example.png"
+                  src="/kaleng.png"
                   alt="Coffee package"
                   width={150}
                   height={225}
