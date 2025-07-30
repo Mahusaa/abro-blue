@@ -67,6 +67,9 @@ export default function ContactSection() {
                 </div>
               </div>
 
+              {/*
+
+
               <div className="mt-8 md:mt-10 pt-6 border-t border-[#000000]/10">
                 <h3 className="text-xl font-bold text-[#000000] mb-4">Follow Us</h3>
                 <div className="flex gap-3">
@@ -99,6 +102,10 @@ export default function ContactSection() {
                   </a>
                 </div>
               </div>
+
+
+
+                */}
             </CardContent>
           </Card>
 

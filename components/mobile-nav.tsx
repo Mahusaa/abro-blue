@@ -52,7 +52,7 @@ export default function MobileNav({ user }: { user: User | null }) {
               </li>
               <li>
                 <Link
-                  href="#catalog"
+                  href="/#catalog"
                   className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
@@ -62,7 +62,7 @@ export default function MobileNav({ user }: { user: User | null }) {
               </li>
               <li>
                 <Link
-                  href="#about"
+                  href="/#about"
                   className="flex items-center justify-between text-lg font-medium hover:text-[#893F26] transition-colors"
                   onClick={() => setOpen(false)}
                 >
@@ -129,9 +129,9 @@ export default function MobileNav({ user }: { user: User | null }) {
 
           <div className="p-4 border-t border-white/10">
             {!user ? (
-              <Link href="/products">
+              <Link href="https://wa.me/6281214110034" target="_blank">
                 <Button className="w-full flex justify-center bg-[#893F26] text-white hover:bg-[#7a361f] font-medium rounded-full px-6">
-                  Shop Now
+                  Chat on WhatsApp
                 </Button>
               </Link>
             ) : (

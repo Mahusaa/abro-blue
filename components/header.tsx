@@ -27,10 +27,10 @@ export default function Header() {
           <Link href="/" className="text-sm font-medium hover:text-[#893F26] transition-colors">
             Home
           </Link>
-          <Link href="#catalog" className="text-sm font-medium hover:text-[#893F26] transition-colors">
+          <Link href="/#catalog" className="text-sm font-medium hover:text-[#893F26] transition-colors">
             Catalog
           </Link>
-          <Link href="#about" className="text-sm font-medium hover:text-[#893F26] transition-colors">
+          <Link href="/#about" className="text-sm font-medium hover:text-[#893F26] transition-colors">
             Our Story
           </Link>
           <Link href="#advantage" className="text-sm font-medium hover:text-[#893F26] transition-colors">
@@ -39,7 +39,7 @@ export default function Header() {
           <Link href="/about" className="text-sm font-medium hover:text-[#893F26] transition-colors">
             About
           </Link>
-          <Link href="#contact" className="text-sm font-medium hover:text-[#893F26] transition-colors">
+          <Link href="/#contact" className="text-sm font-medium hover:text-[#893F26] transition-colors">
             Visit Us
           </Link>
           {user && (
@@ -50,9 +50,9 @@ export default function Header() {
         </nav>
         <div className="flex items-center gap-4">
           {!user ? (
-            <Link href="/products">
-              <Button className="bg-[#893F26] text-white hover:bg-[#7a361f] font-medium rounded-full px-6 hidden md:flex">
-                Shop Now
+            <Link href="https://wa.me/6281214110034" target="_blank">
+              <Button className="w-full flex justify-center bg-[#893F26] text-white hover:bg-[#7a361f] font-medium rounded-full px-6">
+                Chat on WhatsApp
               </Button>
             </Link>
           ) : (

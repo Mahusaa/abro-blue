@@ -47,22 +47,6 @@ export default function HeroSection() {
             </p>
 
             {/* Certification section */}
-            <div className="flex flex-row gap-4 py-2 bg-[#9DC183]/80 rounded p-3">
-              <div className="flex items-center gap-2">
-                <Award className="w-8 h-8 text-gray-300" />
-                <div>
-                  <p className="font-medium text-sm">Control Union Certified</p>
-                  <p className="text-xs text-white">Organic Certification</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-2">
-                <Award className="w-8 h-8 text-gray-300" />
-                <div>
-                  <p className="font-medium text-sm">Control Union Certified</p>
-                  <p className="text-xs text-white">Fairtrade Certification</p>
-                </div>
-              </div>
-            </div>
 
             <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4 pt-2">
               <Link href="/products">
