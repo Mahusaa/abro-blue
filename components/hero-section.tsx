@@ -1,7 +1,6 @@
 import Image from "next/image"
 import { Badge } from "./ui/badge"
 import { Button } from "./ui/button"
-import { Award } from "lucide-react"
 import Link from "next/link"
 export default function HeroSection() {
   return (

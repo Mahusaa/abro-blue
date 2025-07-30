@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, Facebook, Twitter } from 'lucide-react';
+import { MapPin, Phone, Mail } from 'lucide-react';
 
 import { Card, CardContent } from '@/components/ui/card';
 
